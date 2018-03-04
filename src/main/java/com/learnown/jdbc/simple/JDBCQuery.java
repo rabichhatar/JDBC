@@ -29,7 +29,7 @@ public class JDBCQuery {
 			System.out.print("\t");
 			System.out.print(rs.getString(2));
 			System.out.print("\t");
-			System.out.print(rs.getString(3));
+			System.out.print(rs.getInt(3));
 			System.out.print("\t");
 			System.out.println(rs.getInt(4));
 		}
