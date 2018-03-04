@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class JDBCSimple {
+public class JDBCQuery {
 
 	public static void main(String[] args) throws ClassNotFoundException,
 			SQLException {
@@ -22,10 +22,16 @@ public class JDBCSimple {
 		Statement statement = con.createStatement();
 
 		// Step-4 : Execute the query
-		ResultSet rs = statement.executeQuery("select * from login");
+		ResultSet rs = statement.executeQuery("select * from employee");
 
 		while (rs.next()) {
-			System.out.println(rs.getInt(1));
+			System.out.print(rs.getInt(1));
+			System.out.print("\t");
+			System.out.print(rs.getString(2));
+			System.out.print("\t");
+			System.out.print(rs.getString(3));
+			System.out.print("\t");
+			System.out.println(rs.getInt(4));
 		}
 
 		// Step-5 : Close the ResultSet, Statement and Connection
